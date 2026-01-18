@@ -13,6 +13,7 @@ public class Selenium_Login {
 
         WebDriver driver = new ChromeDriver();
         driver.get("https://app.vwo.com/#/login");
+
         WebElement startTrial = driver.findElement(By.linkText("Start a free trial"));
         startTrial.click();
 
@@ -21,5 +22,10 @@ public class Selenium_Login {
 
         WebElement checkBox = driver.findElement(By.id("page-free-trial-step1-cu-gdpr-consent-checkbox"));
         checkBox.click();
+
+        WebElement button_Click = driver.findElement(By.tagName("button"));
+        button_Click.click();
+
+        driver.quit();
     }
 }
